@@ -32,7 +32,7 @@ public class UserHelper extends HelperBase{
     public void logout() {
         click(By.xpath("//a[text()=' Logout ']"));
     }
-    public void loggin(){
+    public void loggin(User user){
         openLoginForm();
         fillLoginForm(new User().withEmail("marsh@gmail.com").withPassword("Marsh1234$"));
         clickLoginButton();

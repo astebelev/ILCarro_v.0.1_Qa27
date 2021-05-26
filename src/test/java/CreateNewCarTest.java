@@ -1,5 +1,7 @@
+import manager.DataProviders;
 import models.Car;
-        import org.testng.Assert;
+import models.User;
+import org.testng.Assert;
         import org.testng.annotations.AfterMethod;
         import org.testng.annotations.BeforeMethod;
         import org.testng.annotations.Test;
@@ -9,7 +11,7 @@ public class CreateNewCarTest extends TestBase {
     @BeforeMethod
     public void precondition() {
         if(!app.user().islogged()){
-            app.user().loggin();
+            app.user().loggin(new User().withEmail(app.setEmail()).withPassword(app.setPassword()));
         }
 
     }
@@ -44,9 +46,27 @@ public class CreateNewCarTest extends TestBase {
         //app.car().pause(2000);
         Assert.assertTrue(app.car().isCarAdded());
     }
+    //__________________________________________________
+    @Test(dataProvider = "dataCarFile",dataProviderClass = DataProviders.class)
+    public void createNewCarDataProvider(Car car) {
+
+
+
+        app.car().opencarCreationForm();
+
+        app.car().fillCarForm(car);
+
+        app.car().attachFoto("C:/Users/Stebelev/Pictures/Subaru.jpg");
+        app.car().pause(2000);
+        app.car().saveNewCar();
+        //app.car().pause(2000);
+        Assert.assertTrue(app.car().isCarAdded());
+        app.car().refresh();
+    }
 
     @AfterMethod
     public void postConditions() {
+
 
     }
 }

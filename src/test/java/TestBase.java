@@ -7,7 +7,9 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import java.io.IOException;
 import java.lang.reflect.Method;
+import java.util.Arrays;
 
 public class TestBase {
 
@@ -15,8 +17,9 @@ public class TestBase {
     Logger logger = LoggerFactory.getLogger(TestBase.class);
 
     @BeforeMethod
-    public void startLogger(Method m) {
+    public void startLogger(Method m, Object[]p) {
         logger.info("Start method -->" + m.getName());
+        logger.info("With param---->"+ Arrays.asList(p));
     }
 
     @AfterMethod
@@ -25,7 +28,7 @@ public class TestBase {
     }
 
     @BeforeSuite
-    public void setUp() {
+    public void setUp() throws IOException {
         app.init();
     }
 

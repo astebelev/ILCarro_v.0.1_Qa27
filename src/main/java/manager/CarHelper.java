@@ -49,4 +49,10 @@ public class CarHelper extends HelperBase{
         String text=wd.findElement(By.cssSelector("div.dialog-container h1")).getText();
         return text.contains("added");
     }
+
+    public void refresh() {
+        wd.navigate().refresh();
+    }
+
+
 }

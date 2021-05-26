@@ -21,13 +21,15 @@ public class SearchHelper extends HelperBase{
 
     public void fillSearchFormByType(String city, String dateFrom, String dataTo) {
         fillInputCity(city);
-        //typeInputPeriod(dateFrom,dataTo);
+        //************************//typeInputPeriod(dateFrom,dataTo);
         typeWithCntrV(dateFrom,dataTo);
     }
 
-    private void typeInputPeriod(String dateFrom, String dataTo) {
-        type(By.id("dates"),dateFrom+" - "+dataTo);
-        wd.findElement(By.id("dates")).sendKeys(Keys.ENTER);
+    public void fillSearchFormByTypeVersioWrong(String city,String dateFrom, String dataTo) {
+        fillInputCity(city);
+        typeWithCntrV(dateFrom,dataTo);
+//        type(By.id("dates"),dateFrom+" - "+dataTo);
+//        wd.findElement(By.id("dates")).sendKeys(Keys.ENTER);
 
     }
 
@@ -59,7 +61,6 @@ public class SearchHelper extends HelperBase{
 
         String[]from =dateFrom.split("/");
         String[]to = dateTo.split("/");
-        //String locator ="//div[text()='"+from[1]+"']";
 
         String locator =String.format("//div[text()=' %s ']",from[1]);
         click(By.xpath(locator));
@@ -75,9 +76,9 @@ public class SearchHelper extends HelperBase{
 
     private void typeInputPeriodNeg(String from, String to) {
         type(By.id("dates"),from + " - " +to);
-
+//************************
         wd.findElement(By.cssSelector(".cdk-overlay-backdrop")).click();
-        //wd.findElement(By.id("dates")).sendKeys(Keys.ENTER);
+
 
     }
 
@@ -90,10 +91,9 @@ public class SearchHelper extends HelperBase{
         String text= wd.findElement(By.xpath("//div[@class='ng-star-inserted']")).getText();
         return text.contains("You can't pick date before today");
 
-        //return isElementPresent(By.xpath("//div[@class='ng-star-inserted']"));
     }
 
-    public void fillserchfom(String city, String from, String to) {
+    public void fillsearchfom(String city, String from, String to) {
         fillInputCity(city);
         typeInputPeriodCheckData(from,to);
     }
@@ -133,27 +133,11 @@ public class SearchHelper extends HelperBase{
     }
 
 
-
+    //************************
     public void backToHomePage() {
         wd.findElement(By.xpath("//a[@href='/']")).click();
         new WebDriverWait(wd,10)
                 .until(ExpectedConditions.visibilityOf(wd.findElement(By.xpath("//div[@class='search-container']"))));
     }
 
-    public void fillSearchForm(String city, String from, String to) {
-        type(By.id("city"),city);
-        pause(5000);
-        wd.findElement(By.cssSelector("div.pac-item")).click();
-        pause(2000);
-        String [] dataF= from.split("/");
-        String [] dataT = to.split("/");
-        click(By.id("dates"));
-
-        String dataLocatorFrom=String.format("//div[text()=' %s ']",dataF[1]);
-        click(By.xpath(dataLocatorFrom));
-
-        String dataLocatorTo=String.format("//div[text()=' %s ']",dataT[1]);
-
-        click(By.xpath(dataLocatorTo));
-    }
 }

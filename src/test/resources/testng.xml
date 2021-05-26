@@ -1,21 +1,12 @@
-<configuration>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <!-- encoders are assigned the type
-             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
-        <encoder>
-            <pattern>%d{HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
-        </encoder>
-    </appender>
+<suite name="Suite1" verbose="1" >
+    <test name="Reg" >
 
-    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>testFile.log</file>
-        <append>true</append>
-        <!-- set immediateFlush to false for much higher logging throughput -->
-        <immediateFlush>true</immediateFlush>
-        <!-- encoders are assigned the type
-             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
-        <encoder>
-            <pattern>%-4relative [%thread] %-5level - %msg%n</pattern>
-        </encoder>
-    </appender>
+
+        <classes>
+            <class name="LoginTest" />
+
+        </classes>
+    </test>
+</suite>
