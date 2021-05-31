@@ -6,7 +6,7 @@ import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.io.File;
-import java.io.FileNotFoundException;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
@@ -20,7 +20,7 @@ public class ApplicationManager {
     SearchHelper search;
     String browser;
     Properties properties;
-    JScriptHelper jsHelper;
+
 
     public ApplicationManager(String browser)
     {
@@ -53,7 +53,7 @@ public class ApplicationManager {
         user = new UserHelper(wd);
         car = new CarHelper(wd);
         search= new SearchHelper(wd);
-        jsHelper = new JScriptHelper(wd);
+
 
     }
     public String setEmail(){
@@ -79,7 +79,5 @@ public class ApplicationManager {
         return search;
     }
 
-    public JScriptHelper executor() {
-        return jsHelper;
-    }
+
 }
