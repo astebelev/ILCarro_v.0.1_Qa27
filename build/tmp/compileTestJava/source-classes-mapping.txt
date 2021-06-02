@@ -8,7 +8,5 @@ LoginTest.java
  LoginTest
 SearchTmp.java
  SearchTmp
-JScriptTest.java
- JScriptTest
 SearchTest.java
  SearchTest

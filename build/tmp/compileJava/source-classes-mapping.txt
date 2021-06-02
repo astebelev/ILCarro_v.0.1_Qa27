@@ -18,5 +18,3 @@ manager/SearchHelper.java
  manager.SearchHelper
 manager/ApplicationManager.java
  manager.ApplicationManager
-manager/JScriptHelper.java
- manager.JScriptHelper

@@ -20,25 +20,25 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">23</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">9</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="ignored">
-<div class="counter">0</div>
+<div class="counter">5</div>
 <p>ignored</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">12.389s</div>
+<div class="counter">2m19.74s</div>
 <p>duration</p>
 </div>
 </td>
@@ -47,8 +47,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">50%</div>
 <p>successful</p>
 </div>
 </td>
@@ -58,13 +58,85 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Packages</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Classes</a>
+<a href="#tab1">Ignored tests</a>
+</li>
+<li>
+<a href="#tab2">Packages</a>
+</li>
+<li>
+<a href="#tab3">Classes</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<ul class="linkList">
+<li>
+<a href="classes/CreateNewCarTest.html">CreateNewCarTest</a>.
+<a href="classes/CreateNewCarTest.html#createNewCar">createNewCar</a>
+</li>
+<li>
+<a href="classes/CreateNewCarTest.html">CreateNewCarTest</a>.
+<a href="classes/CreateNewCarTest.html#createNewCarDataProvider[0](models.Car@19eac12c)">createNewCarDataProvider[0](models.Car@19eac12c)</a>
+</li>
+<li>
+<a href="classes/CreateNewCarTest.html">CreateNewCarTest</a>.
+<a href="classes/CreateNewCarTest.html#createNewCarDataProvider[1](models.Car@2d3549e8)">createNewCarDataProvider[1](models.Car@2d3549e8)</a>
+</li>
+<li>
+<a href="classes/SearchTest.html">SearchTest</a>.
+<a href="classes/SearchTest.html#negativeTestTypePeriodInPath">negativeTestTypePeriodInPath</a>
+</li>
+<li>
+<a href="classes/SearchTest.html">SearchTest</a>.
+<a href="classes/SearchTest.html#postConditions">postConditions</a>
+</li>
+<li>
+<a href="classes/SearchTest.html">SearchTest</a>.
+<a href="classes/SearchTest.html#selectPeriodNotCurrentMount">selectPeriodNotCurrentMount</a>
+</li>
+<li>
+<a href="classes/SearchTmp.html">SearchTmp</a>.
+<a href="classes/SearchTmp.html#negativeTestTypePeriodInPath">negativeTestTypePeriodInPath</a>
+</li>
+<li>
+<a href="classes/SearchTmp.html">SearchTmp</a>.
+<a href="classes/SearchTmp.html#postConditions">postConditions</a>
+</li>
+<li>
+<a href="classes/TestListenerTestsNG.html">TestListenerTestsNG</a>.
+<a href="classes/TestListenerTestsNG.html#testListener">testListener</a>
+</li>
+</ul>
+</div>
+<div id="tab1" class="tab">
+<h2>Ignored tests</h2>
+<ul class="linkList">
+<li>
+<a href="classes/SearchTest.html">SearchTest</a>.
+<a href="classes/SearchTest.html#selectSerachPeriod">selectSerachPeriod</a>
+</li>
+<li>
+<a href="classes/SearchTest.html">SearchTest</a>.
+<a href="classes/SearchTest.html#typeSearchPeriod">typeSearchPeriod</a>
+</li>
+<li>
+<a href="classes/SearchTmp.html">SearchTmp</a>.
+<a href="classes/SearchTmp.html#selectPeriodNotCurrentMount">selectPeriodNotCurrentMount</a>
+</li>
+<li>
+<a href="classes/SearchTmp.html">SearchTmp</a>.
+<a href="classes/SearchTmp.html#selectSerachPeriod">selectSerachPeriod</a>
+</li>
+<li>
+<a href="classes/SearchTmp.html">SearchTmp</a>.
+<a href="classes/SearchTmp.html#typeSearchPeriod">typeSearchPeriod</a>
+</li>
+</ul>
+</div>
+<div id="tab2" class="tab">
 <h2>Packages</h2>
 <table>
 <thead>
@@ -79,19 +151,19 @@
 </thead>
 <tbody>
 <tr>
-<td class="success">
+<td class="failures">
 <a href="packages/default-package.html">default-package</a>
 </td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>12.389s</td>
-<td class="success">100%</td>
+<td>23</td>
+<td>9</td>
+<td>5</td>
+<td>2m19.74s</td>
+<td class="failures">50%</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab3" class="tab">
 <h2>Classes</h2>
 <table>
 <thead>
@@ -106,14 +178,54 @@
 </thead>
 <tbody>
 <tr>
+<td class="failures">
+<a href="classes/CreateNewCarTest.html">CreateNewCarTest</a>
+</td>
+<td>3</td>
+<td>3</td>
+<td>0</td>
+<td>45.462s</td>
+<td class="failures">0%</td>
+</tr>
+<tr>
 <td class="success">
-<a href="classes/JScriptTest.html">JScriptTest</a>
+<a href="classes/LoginTest.html">LoginTest</a>
+</td>
+<td>9</td>
+<td>0</td>
+<td>0</td>
+<td>1m0.30s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="failures">
+<a href="classes/SearchTest.html">SearchTest</a>
+</td>
+<td>5</td>
+<td>3</td>
+<td>2</td>
+<td>18.383s</td>
+<td class="failures">0%</td>
+</tr>
+<tr>
+<td class="failures">
+<a href="classes/SearchTmp.html">SearchTmp</a>
+</td>
+<td>5</td>
+<td>2</td>
+<td>3</td>
+<td>3.410s</td>
+<td class="failures">0%</td>
+</tr>
+<tr>
+<td class="failures">
+<a href="classes/TestListenerTestsNG.html">TestListenerTestsNG</a>
 </td>
 <td>1</td>
+<td>1</td>
 <td>0</td>
-<td>0</td>
-<td>12.389s</td>
-<td class="success">100%</td>
+<td>12.184s</td>
+<td class="failures">0%</td>
 </tr>
 </tbody>
 </table>
@@ -126,7 +238,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.7</a> at May 26, 2021, 8:56:57 PM</p>
+<a href="http://www.gradle.org">Gradle 6.7</a> at Jun 2, 2021, 7:47:02 PM</p>
 </div>
 </div>
 </body>
