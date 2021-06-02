@@ -22,9 +22,9 @@ public class LoginTest extends TestBase {
     @DataProvider
     public Iterator<Object[]> validData() {
         List<Object[]> list = new ArrayList<>();
-        list.add(new Object[]{"marsh@gmail.com", "Marsh1234$"});
-        list.add(new Object[]{"marsh@gmail.com", "Marsh1234$"});
-        list.add(new Object[]{"marsh@gmail.com", "Marsh1234$"});
+        list.add(new Object[]{"marshgmail.com", "Marsh1234$"});
+       // list.add(new Object[]{"marsh@gmail.com", "Marsh1234$"});
+       // list.add(new Object[]{"marsh@gmail.com", "Marsh1234$"});
         return list.iterator();
     }
 
